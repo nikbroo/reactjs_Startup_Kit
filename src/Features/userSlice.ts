@@ -58,6 +58,25 @@ export const loginAccount = createAsyncThunk(
   }
 );
 
+export const uploadImage = createAsyncThunk(
+  "uploadImage",
+  async (data: object, { rejectWithValue }) => {
+    try {
+      const url = "/user/upload";
+      const requestBody = data;
+      const headers = { "Content-Type": "multipart/form-data" };
+      const response = await instance.post(url, requestBody, { headers });
+      if (response?.data?.success) {
+        // console.log(response, "------------response uploadImage");
+      }
+      return response?.data;
+    } catch (error: any) {
+      console.log("---------->uploadImage error", error);
+      throw rejectWithValue(error?.response?.data);
+    }
+  }
+);
+
 const userSlice = createSlice({
   name: "user",
   initialState,
