@@ -1,5 +1,4 @@
 import axios from "axios";
-import { base_URL } from "./baseURL";
 import localStorage from "redux-persist/es/storage";
 
 const fetchToken = async () => {
@@ -21,13 +20,13 @@ const fetchToken = async () => {
 fetchToken();
 
 export const instance = axios.create({
-  baseURL: base_URL,
+  baseURL: process.env.REACT_APP_BASE_URL,
   timeout: 10000,
   headers: { "Content-Type": "application/json" },
 });
 
 export const uploadInstance = axios.create({
-  baseURL: base_URL,
+  baseURL: process.env.REACT_APP_BASE_URL,
   timeout: 10000,
   headers: {
     "Content-Type": "multipart/form-data",
@@ -36,7 +35,7 @@ export const uploadInstance = axios.create({
 });
 
 export const randomTokenInstance = axios.create({
-  baseURL: base_URL,
+  baseURL: process.env.REACT_APP_BASE_URL,
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
