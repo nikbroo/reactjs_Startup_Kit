@@ -5,7 +5,7 @@ const Login = () => {
   return (
     <div className="w-full h-full flex">
       <SidePart />
-      <div className="flex flex-col justify-center w-1/2 p-12 overflow-auto h-full">
+      <div className="content-center w-1/2 p-12 overflow-auto h-full">
         <div className="flex max-w-[200px] font-text text-[16px] gap-3 text-[#8591A2] border-b border-[#8591A2] border-solid pb-1 pl-2">
           <p className="text-primary font-bold">Login</p>
           <p className="w-[1px] h-[26px] border border-[#8591A2] border-solid"></p>
