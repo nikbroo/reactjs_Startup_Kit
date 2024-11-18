@@ -1,5 +1,5 @@
 import { Form, Formik } from "formik";
-import InputField from "../FormFields/InputField";
+import InputField from "../../../components/FormFields/InputField";
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 
@@ -20,9 +20,11 @@ const LoginForm = () => {
       }}
     >
       {({ values, errors, touched }) => (
-        <Form className="w-full flex flex-col gap-6">
+        <Form className="w-full flex flex-col">
           <InputField
             labelName="Email"
+            labelWidth="90"
+            className="mb-5"
             type="email"
             name="email"
             placeholder="Enter email id"
@@ -33,6 +35,8 @@ const LoginForm = () => {
 
           <InputField
             labelName="Password"
+            labelWidth="90"
+            className="mb-5"
             type="password"
             name="password"
             placeholder="Enter password"
@@ -76,9 +80,7 @@ const LoginForm = () => {
             </button>
           </div>
 
-          <p className="text-primary text-[12px] font-medium">
-            Need help?
-          </p>
+          <p className="text-primary text-[12px] font-medium">Need help?</p>
         </Form>
       )}
     </Formik>

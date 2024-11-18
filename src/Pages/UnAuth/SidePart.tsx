@@ -3,7 +3,7 @@ import ShipBG from "../../assets/images/shipBG.png";
 const SidePart = () => {
   return (
     <div
-      className="w-1/2 bg-cover bg-center flex items-center justify-center"
+      className="w-1/3 bg-cover bg-center flex items-center justify-center"
       style={{ backgroundImage: `url(${ShipBG})` }}
     >
       <div className="max-w-[500px] text-center text-primary px-6 font-bold flex gap-8 items-center justify-center flex-col">
